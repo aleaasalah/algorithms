@@ -1,0 +1,43 @@
+
+//Time Complexity: O(n)
+
+
+package linearsearch;
+
+//import java.util.Arrays;
+
+/**
+ *
+ * @author Aleaa
+ */
+public class Linearsearch {
+  static int linear(int arr[], int num, int lindex,int rindex){
+      
+      if(arr[lindex]==num){
+          return lindex;
+        
+      }
+      else if (arr[rindex]==num){
+          return rindex;
+          
+      } 
+      else 
+          return linear(arr,num,lindex+1,rindex-1);
+    }  
+        
+    
+
+    /**
+     * @param args the command line arguments
+     */
+        public static void main(String[] args) {
+       int[]x={5,6,8,3,7,9,1,0};
+       //int num=5;
+       System.out.println("the index of the element is "+" " + linear(x,5,0,7));
+      
+
+
+        
+    }
+    
+}
