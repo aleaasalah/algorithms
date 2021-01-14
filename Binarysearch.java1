@@ -1,0 +1,42 @@
+
+package binarysearch;
+
+import java.util.Arrays;
+
+/**
+ *
+ * @author Aleaa
+ */
+public class Binarysearch {
+   static int binarysearch(int []arr,int x,int low,int high){
+    while(low<=high){
+        int mid=low+(high-low)/2;
+    
+    if(arr[mid]==x)
+        return mid;
+     if (arr[mid]<x)
+        low=mid+1;
+     else
+         high=mid-1;
+    }
+    return -1;
+   }
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        int []x={1,2,3,4,5,6,7};
+        int low=0;
+        int high=x.length-1;
+        int n=5;
+        int result=binarysearch(x,n,low,high);
+        if(result==-1)
+            System.out.print("the element not found ");
+        else
+           System.out.print("the element found and the index is "+" "+result);
+        
+      
+    }   
+
+   
+}//Time Complexity: O(n)
